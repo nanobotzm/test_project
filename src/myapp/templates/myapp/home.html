@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    {% for obj in object_list %}
+        <div class="card text my-3">
+          <div class="card-header">
+            <p><a href="{{obj.url}}" target="_blank">{{obj.title}}</a></p>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{obj.company}} | {{obj.language.name}} | {{obj.city.name}}</h5>
+            <p class="card-text">{{obj.description}}</p>
+          </div>
+          <div class="card-footer text-muted">
+              {{ obj.timestamp }}
+          </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
