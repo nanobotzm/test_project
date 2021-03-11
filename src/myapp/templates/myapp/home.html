@@ -3,6 +3,39 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+
+<!--    <form action="https://www.google.com/search">-->
+<!--        <label for="fname">City</label><br>-->
+<!--        <input type="text" id="fname" name="q"><br>-->
+<!--        <input type="submit" value="Submit">-->
+<!--    </form>-->
+
+<!--    <form method="POST" action=""> {% csrf_token %}-->
+<!--        <label for="fname">City</label><br>-->
+<!--        <input type="text" id="fname" name="city"><br>-->
+<!--        <input type="submit" value="Submit">-->
+<!--    </form>-->
+
+<!--    <form action="">-->
+<!--        <label>Вакансия:</label><br>-->
+<!--        <input type="text" name="language"><br>-->
+<!--        <label>Город:</label><br>-->
+<!--        <input type="text" name="city"><br>-->
+<!--        <input type="submit" value="Submit">-->
+<!--    </form>-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-6 mx-auto">-->
+  <div class="row">
+      <div class="col-md-6 mx-auto">
+    <form action="">
+                <div class="row">
+                    {{ form.as_p }}
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Найти</button>
+            </form>
+        </div>
+    </div>
+
     {% for obj in object_list %}
         <div class="card text my-3">
           <div class="card-header">
@@ -16,6 +49,9 @@
               {{ obj.timestamp }}
           </div>
         </div>
+
+    {% empty %}
+        <h3 class="text-center">По вашему запросу ничего не найдено.</h3>
     {% endfor %}
 {% endblock %}
 
