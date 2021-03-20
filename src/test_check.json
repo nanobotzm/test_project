@@ -1,0 +1,102 @@
+[
+{
+  "model": "myapp.city",
+  "pk": 1,
+  "fields": {
+    "name": "Сумы",
+    "slug": "sumy"
+  }
+},
+{
+  "model": "myapp.city",
+  "pk": 2,
+  "fields": {
+    "name": "Киев",
+    "slug": "kiev"
+  }
+},
+{
+  "model": "myapp.city",
+  "pk": 3,
+  "fields": {
+    "name": "Харьков",
+    "slug": "harkov"
+  }
+},
+{
+  "model": "myapp.language",
+  "pk": 1,
+  "fields": {
+    "name": "Python",
+    "slug": "python"
+  }
+},
+{
+  "model": "myapp.language",
+  "pk": 3,
+  "fields": {
+    "name": "JS",
+    "slug": "js"
+  }
+},
+{
+  "model": "myapp.language",
+  "pk": 4,
+  "fields": {
+    "name": "Java",
+    "slug": "java"
+  }
+},
+{
+  "model": "myapp.vacancy",
+  "pk": 1,
+  "fields": {
+    "url": "https://www.work.ua/jobs/4048942/",
+    "title": "Python Developer",
+    "company": "LeverX Group",
+    "description": "About the company:\r\n\r\nWe analyze, design, and implement solutions of any complexity. We provide everything a business needs to grow and succeed.\r\n\r\nAnd we invite you to be a part of our friendly and talented team in Kyiv!\r\n\r\nOpportunities:\r\n\r\nExcellent work environment: the company is big enough to be reliable, yet small enough to be person-oriented;\r\nFull-cycle projects and product development;\r\nTraining & development-focused approach: clear roadmap for training employees to sustain and enhance the productivity of the organization as a whole;\r\nCollaboration with the teams from the European Union and United States both onsite and remotely;\r\nComprehensive employee benefits package — we cover the costs of your sports activities, medical services, and self-education (up to $ 200 per month).\r\nYou will:\r\n\r\nDesign and develop large-scale web applications using Python;\r\nFocus on back-end software development and interface with third party APIs;\r\nContribute to the overall software development lifecycle including requirements gathering/analysis, design, development, release/version control, testing, deployment and support;\r\nBe a part of Agile-based and globally distributed team.\r\nNeed to have:\r\n\r\nStrong Python development skills;\r\nKnowledge of Django framework;\r\nDatabase experience including MySQL and/or PostgreSQL (queries, design);\r\nStrong understanding of software programming best practices, data structures, algorithms, databases, and networks;\r\nEnglish (intermediate, upper-intermediate or higher);\r\nAvailability to travel on business up to 15% of the work time.\r\nNice to have:\r\n\r\nExperience in designing and developing REST APIs;\r\nUnderstanding of NoSQL databases;\r\nExperience with distributed source control systems (e.g. Mercurial, Git);\r\nFamiliarity with message passing technology such as AMQP and ZeroMQ;\r\nExperience with AWS, EC2, S3, and other related cloud technologies;\r\nPractical experience in Agile development methodologies;\r\nBachelor`s degree or relevant experience in computer science;\r\nGood communication skills.\r\nMakes you stand out:\r\n\r\nExperience in writing large-scale and highly usable web applications.",
+    "timestamp": "2021-03-04",
+    "city": 2,
+    "language": 1
+  }
+},
+{
+  "model": "myapp.vacancy",
+  "pk": 2,
+  "fields": {
+    "url": "https://www.work.ua/jobs/4242355/",
+    "title": "Python developer (middle)",
+    "company": "Datas Technology",
+    "description": "DATAS Technology — an international company specializing in providing comprehensive IT services, software development and system integration to the clients from private and public segments, especially to the financial institutions, large companies and holdings.\r\n\r\nREQUIREMENTS:\r\n\r\n3+ years of hands-on development experience\r\nExperience developing data-oriented products using Python\r\nExperience in data processing FW such as: Spark, Pandas, Hadoop, Airflow\r\nExperience in Distributed Databases Such as: Elasticsearch, Mongo, Redis, etc'\r\nExperience with developing microservices based architecture\r\nExperience working in container-based environments using tools such as: K8s, helm\r\nExperience working as a software developer in an Agile environment\r\nAbility to perform well under pressure and tight schedules\r\nFluent English\r\nNice to have:\r\n\r\nExperience in machine learning FWs such as: SKLearn, Tensorflow\r\nExperience with RedHat OpenShift\r\nAdvanced Dev Environment knowledge: Maven, GIT, Jenkins, Docker\r\nExperience in CI tools such as Jenkins\r\nTHE COMPANY OFFERS:\r\n\r\nWork in an international company\r\nStable and competitive salary\r\nInteresting tasks and projects using new technologies\r\nOpportunities for professional and career development\r\nComfortable conditions, friendly, friendly staff\r\nMedical insurance\r\nOffice in the center of Kyiv metro University, near the Circus",
+    "timestamp": "2021-03-05",
+    "city": 2,
+    "language": 1
+  }
+},
+{
+  "model": "myapp.vacancy",
+  "pk": 3,
+  "fields": {
+    "url": "https://www.work.ua/jobs/4091738/",
+    "title": "JavaScript, Node.js Developer (Cyber Security Solution)",
+    "company": "Sigma Software",
+    "description": "Are you a JavaScript/Node.js Developer willing to join a challenging startup? Then welcome to the growing clean.io family.\r\n\r\nBeing our team member means being open-minded, proactive and friendly, supporting, ready to accept the challenge, take responsibility, and never stop learning. We need to be one step ahead of attackers, which means being smarter, quicker, and looking beyond the surface.\r\n\r\nCustomer:\r\n\r\nClean.io is a novel cybersecurity solution that protects revenue and user experiences across all platforms.\r\n\r\nProject:\r\n\r\nWe are working with a highly dynamic AdTech ecosystem with a goal to protect the world from malvertising.\r\n\r\nOur team develops an innovative, start-up solution, that allows the merchants to protect their margins through mitigation of negative effects extensions like Honey, Wikibuy, Piggy, and more.\r\n\r\nThe solution is being a part of products portfolio that includes a variety of software products currently written with JavaScript (ES, TypeScript, ReactJS), and Go.\r\n\r\nRequirements:\r\n\r\nAt least 4 years of strong hands-on software development experience in web/cloud technologies;\r\nProficient understanding the ad tech ecosystem and/or ad tech experience;\r\nAt least 3 years' experience of JavaScript development, including ES 5.0, 6.0, TypeScript;\r\nSolid knowledge of DOM API, DOM Event Model, XmlHttpRequest (HTTP/HTTPS), Simple data structs (Map, Set, List, Queue) and Design patterns;\r\nStrong working knowledge of «vanilla» JavaScript, HTML (semantic and accessible), CSS, and JSON;\r\nStrong experience with full stack development, including understanding UI frameworks and back end architecture interactions;\r\nStrong experience developing RESTful web services using Node.js;\r\nCommercial experience working with SQL/noSQL databases;\r\nStrong knowledge of browser limitations, testing, and debugging;\r\nHands-on debugging experience with Developer Tools;\r\nStrong understanding of code versioning tools, such as Git;\r\nUpper-Intermediate level of spoken English.\r\nPersonal Profile:\r\nFeel comfortable working in a startup environment, with a willingness to participate beyond their core job responsibilities;\r\nStrong communication skills and being an active team player;\r\nCreative and innovative, willing to give and push forward ideas.\r\nWill be a plus:\r\n\r\nFamiliarity with tag management systems, Google ad manager, Header Bidding, ad blocking technology;\r\nHands-on experience with prebid.js and/or GAM;\r\nHave built technology based on pure JavaScript (no frameworks).\r\nResponsibilities:\r\n\r\nActively participate in design/build stage of the software engineering life cycle (requirements gathering, prototyping, architecture, detailed design, development, testing, and deployment);\r\nBe involved in planning, designing, and execution with Agile delivery methodologies;\r\nCreate awesome code with awesome documentation;\r\nUtilize the best engineering practices (unit tests, code/design review, etc.);\r\nStand up for high quality solutions and bring new ideas to life;\r\nTake part in technical discussions, listen to arguments, and apply critical thinking.",
+    "timestamp": "2021-03-05",
+    "city": 3,
+    "language": 3
+  }
+},
+{
+  "model": "myapp.vacancy",
+  "pk": 4,
+  "fields": {
+    "url": "https://www.work.ua/jobs/3430428/",
+    "title": "Android Developer (Java SE)",
+    "company": "3SS",
+    "description": "We are looking for an experienced Android Developer.\r\nTogether with your colleagues you will optimize the user experience on mobile devices and Set Top Boxes for more than 100 million users.\r\n\r\nMain responsibilities\r\n\r\nYou will\r\n\r\nwrite well-designed, testable, efficient code\r\nintegrate software components into a fully functional software system\r\ndocument and maintain software functionality\r\ntroubleshoot, debug and upgrade existing systems\r\nRequirements\r\n\r\nYou need:\r\n\r\nExperience with\r\nremote data via REST and JSON\r\nAndroid Set Top Box development\r\ncontent Provider implementation\r\nKnowledge in UI/UX and working with designers\r\nFluent English\r\nAny of those will increase your chances\r\n\r\nCertification (s) in relevant fields\r\nBackground in Java/JEE\r\nWorking experience with\r\nthird party libraries like: Butterknife, Retrofit, Dagger 2, Picasso, Volley\r\ndata persistence\r\ndifferent types of Android Services\r\nAgile Development\r\nAndroid Studio+ Gradle\r\nYou get\r\n\r\nthe opportunity to grow and develop alongside us and work in a dynamic, stable environment\r\nto work in cross-functional teams with a lot of heart and brains\r\nto be a member of the #LearningOrganization and to develop into the professional you look up to now\r\nAbout us — #WeAre3SS\r\n\r\nWe are passionate about what we create and about the people with whom we work.\r\nWe believe in transparency, integrity, and fair play.\r\nWe actively share knowledge with our colleagues — we expect you to pitch in and do the same.\r\nWe work smart … and party hard!",
+    "timestamp": "2021-03-05",
+    "city": 1,
+    "language": 4
+  }
+}
+]
