@@ -1,5 +1,10 @@
+import jsonfield
 from django.db import models
 from myapp.utils import from_cyrillic_to_lat
+
+
+def defaults_url():
+    return {"work": "", "rabota": "", "dou": "", "djinni": ""}
 
 
 class City(models.Model):
@@ -59,3 +64,19 @@ class Vacancy(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Error(models.Model):
+    timestamp = models.DateField(auto_now_add=True)
+    data = jsonfield.JSONField()
+
+
+class URL(models.Model):
+    city = models.ForeignKey('City', on_delete=models.CASCADE,
+                             verbose_name='Город')
+    language = models.ForeignKey('Language', on_delete=models.CASCADE,
+                                 verbose_name='Язык программирования')
+    url_data = jsonfield.JSONField(default=defaults_url)
+
+    class Meta:
+        unique_together = ('city', 'language')
