@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="row" >
+    <div class="col-md-6 mx-auto">
+        <form method="GET" action="">
+              <div class="mb-3">
+                {{ form.as_p }}
+              </div>
+            <button type="submit" class="btn btn-primary">Найти</button>
+        </form>
+    </div>
+</div>
+    {% for obj in object_list %}
+        <div class="card my-3">
+          <h5 class="card-header"><a href="{{ obj.url }}" target="_blank">{{ obj.title }}</a></h5>
+            <div class="card-body">
+                <h5 class="card-title">{{obj.company}}</h5>
+                <p>{{obj.city.name}} | {{obj.language.name}}</p>
+                <p class="card-text">{{obj.description}}</p>
+            </div>
+            <div class="card-footer text-muted text-center">
+                {{obj.timestamp}}
+            </div>
+        </div>
+    {% empty %}
+
+        <h3 class="text-center">По вашему запросу ничего не найдено.</h3>
+
+    {% endfor %}
+{% if object_list %}
+
+<div class="row">
+    <div class="col">
+
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                {% if object_list.has_previous %}
+                <li class="page-item">
+
+                <a class="page-link" tabindex="-1" aria-disabled="true" href="?page={{ object_list.previous_page_number }}">Previous</a>
+<!--                <a href="?page={{ object_list.previous_page_number }}">previous</a>-->
+
+                </li>
+                {% endif %}
+                {% for page in object_list.paginator.page_range %}
+                <li class="page-item {% if page ==  object_list.number %}
+                    active
+                    {% endif %}">
+                    <a class="page-link active" href="?page={{ page }}">{{page}}</a></li>
+                {% endfor %}
+
+                {% if object_list.has_next %}
+                <li class="page-item">
+
+                    <a class="page-link" href="?page={{ object_list.next_page_number }}">Next</a>
+
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+<!--        <div class="pagination">-->
+<!--            <span class="step-links">-->
+<!--                {% if object_list.has_previous %}-->
+<!--                <a href="?page=1">&laquo; first</a>-->
+<!--                <a href="?page={{ object_list.previous_page_number }}">previous</a>-->
+<!--                {% endif %}-->
+
+<!--                <span class="current">-->
+<!--                Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.-->
+<!--                </span>-->
+
+<!--                {% if object_list.has_next %}-->
+<!--                    <a href="?page={{ object_list.next_page_number }}">next</a>-->
+<!--                    <a href="?page={{ object_list.paginator.num_pages }}">last &raquo;</a>-->
+<!--                {% endif %}-->
+<!--            </span>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+</div>
+{% endif %}
+{% endblock %}
