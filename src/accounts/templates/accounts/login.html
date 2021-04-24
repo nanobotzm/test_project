@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <div class="row">
+      <div class="col-md-6 mx-auto">
+          <h4 class="">Вход</h4>
+            <form method="POST" action=""> {% csrf_token %}
+
+                <div class="row">
+                    {{ form.as_p }}
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Войти</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+

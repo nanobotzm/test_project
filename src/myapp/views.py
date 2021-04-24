@@ -19,7 +19,7 @@ def home_view(request):
             form_request['language__slug'] = language
 
     queryset = Vacancy.objects.filter(**form_request)
-    return render(request, 'test_check/home.html', {'object_list': queryset,
+    return render(request, 'myapp/home.html', {'object_list': queryset,
                                                     'form': form})
 
 
