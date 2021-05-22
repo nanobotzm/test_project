@@ -1,5 +1,6 @@
 import asyncio
 import codecs
+import datetime
 
 from django.contrib.auth import get_user_model
 from django.db import DatabaseError
@@ -89,7 +90,13 @@ for vac in vacancies:
         pass
 
 if errors:
-    e = Error(data=errors).save()
+    qs = Error.objects.filter(timestamp=datetime.date.today())
+    if qs.exists():
+        err = qs.first()
+        err.data.update({'errors': errors})
+        err.save()
+    else:
+        e = Error(data=f'Errors: {errors}').save()
 # with codecs.open('work.txt', 'w', 'utf-8') as file:
 #     file.write(str(vacancies))
 
