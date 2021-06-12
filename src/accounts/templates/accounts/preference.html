@@ -11,25 +11,42 @@
             <div class="mb-3">
                 {{ form.as_p }}
             </div>
+            <div class="row">
+                <div class="col ">
             <button type="submit" class="btn btn-primary mb-3">Сохранить</button>
         </form>
-      <form method="POST" action="{% url 'accounts:delete' %}"> {% csrf_token %}
-            <button type="submit" class="btn btn-danger ">Удалить</button>
-        </form>
-    </div>
+                </div>
+            <div class="col col-md-auto">
+              <form method="POST" action="{% url 'accounts:delete' %}"> {% csrf_token %}
+                    <button type="submit" class="btn btn-danger ">Удалить аккаунт</button>
+              </form>
+            </div>
 </div>
+</div>
+
+
 
 <div class="row">
   <div class="col-md-6 mx-auto">
       <p class="my-3">Если у Вас есть пожелания по добавлению города и языка
                     программирования, свяжитесь с нами: </p>
-        <form method="POST" action="{% url 'accounts:contact' %}"> {% csrf_token %}
+        <p>
+          <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapsed" aria-expanded="false" aria-controls="collapseExample">
+            Отобразить форму
+          </button>
+        </p>
+<div class="collapse" id="collapsed">
+  <div class="card card-body">
+            <form method="POST" action="{% url 'accounts:contact' %}"> {% csrf_token %}
 
-            <div class="mb-3">
-                {{ contact_form.as_p }}
-            </div>
+                <div class="mb-3">
+                    {{ contact_form.as_p }}
+                </div>
             <button type="submit" class="btn btn-primary mb-3">Отправить</button>
         </form>
+  </div>
+</div>
+
     </div>
 </div>
 

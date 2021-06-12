@@ -61,13 +61,13 @@ to = ADMIN_USER
 _html = ''
 if qs.exists():
     error = qs.first()
-    data = error.data
+    data = error.data.get('errors', [])
     for i in data:
         _html += f'<p>Error: <a href="{i["url"]}">{i["title"]}</a></p>'
     subject += f'Ошибка сбора вакансий на {today}. '
     text_content += 'Ошибка'
 
-    data = error.data['user_data']
+    data = error.data.get('user_data')
     if data:
         _html += '<hr>'
         _html += '<h2>Запрос на добавление вакансий</h2>'

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: CherryCreamSoda;
+    src: url(../fonts/CherryCreamSoda-Regular.ttf);
+}
+
+#logo-text {
+    font-family: CherryCreamSoda;
+    color: #000;
+}
